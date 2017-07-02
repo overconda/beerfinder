@@ -8,7 +8,7 @@
 <!-- Copyright: Copyright 2017 Adobe System Incorporated. All rights reserved. -->
 <font-face font-family="Oswald-Bold" units-per-em="2048" underline-position="-256" underline-thickness="102"/>
 <missing-glyph horiz-adv-x="748" d="M68,0l0,1365l544,0l0,-1365M136,68l408,0l0,1229l-408,0z"/>
-<glyph unicode="" horiz-adv-x="0"/>
+<glyph unicode="" horiz-adv-x="0"/>
 <glyph unicode=" " horiz-adv-x="410"/>
 <glyph unicode="!" horiz-adv-x="524" d="M95,0l0,317l323,0l0,-317M199,462l-104,1338l343,0l-123,-1338z"/>
 <glyph unicode="&quot;" horiz-adv-x="758" d="M434,1202l-1,599l285,0l-102,-599M130,1202l-90,599l294,0l-1,-599z"/>

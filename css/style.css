@@ -9,6 +9,8 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Layout & Container
+	1.1 Devices available notify
+	1.2 Page loading
 2.0 Typography & Elements
 	2.1 Buttons
 	2.2 Modal
@@ -77,6 +79,33 @@ table {
 
 
 /********************************************
+@font-face embed
+*********************************************/
+@font-face {
+    font-family: 'paytone_oneregular';
+    src: url('fonts/paytoneone/paytoneone-webfont.eot');
+    src: url('fonts/paytoneone/paytoneone-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/paytoneone/paytoneone-webfont.woff2') format('woff2'),
+         url('fonts/paytoneone/paytoneone-webfont.woff') format('woff'),
+         url('fonts/paytoneone/paytoneone-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto/roboto-regular-webfont.eot');
+    src: url('fonts/roboto/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('fonts/roboto/roboto-regular-webfont.woff') format('woff'),
+         url('fonts/roboto/roboto-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/********************************************
 1.0 Layout & Container
 *********************************************/
 html {
@@ -102,7 +131,7 @@ html,body {
 }
 
 body {
-	font-family: 'Paytone One', sans-serif;
+	font-family: 'paytone_oneregular', sans-serif;
 	font-size: 15px;
 	line-height: 1.2em;
 	color: #53585F;
@@ -194,6 +223,18 @@ body {
 	border: 3px solid;
 	border-color: #ffd000;
 	overflow: auto;
+}
+
+.full-page-container {
+	padding: 30px 0;
+}
+
+.full-page-container h1 {
+	font-size: 22px;
+	padding-bottom: 15px;
+	margin: 5px 0 20px;
+	border-bottom: 2px dashed #a5a9a7;
+	text-align: center;
 }
 
 .clearfix:before,
@@ -307,7 +348,10 @@ ul {
 	opacity: 0;
 }
 
-/* ===== Devices available notify ===== */
+
+/********************************************
+1.1 Devices available notify
+*********************************************/
 #disable-devices {
 	display: none;
 	position: fixed;
@@ -328,7 +372,8 @@ ul {
 	position: relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
@@ -436,19 +481,47 @@ ul {
 		display: none;
 	}
 }
-/* ===== Devices available notify End ===== */
 
-/* ===== Page loading start ===== */
+
+/********************************************
+1.2 Page loading
+*********************************************/
 #page-loading {
 	position: fixed;
-	top: 0;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #fff;
+	background-color: #ffd000;
 	text-align: center;
 	z-index: 9999999999;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	
+	-webkit-transition-delay: 0.3s;
+	-moz-transition-delay: 0.3s;
+	-o-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+
+#page-loading:after {
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: -100px;
+	width: 0;
+	height: 0;
+	border-top: 100px solid;
+	border-top-color: #ffd000;
+	border-right: 100vw solid transparent;
+}
+
+#page-loading.pageLoaded {
+	bottom: calc(100% + 100px);
 }
 
 .loading-element {
@@ -459,7 +532,8 @@ ul {
 	margin: 0 auto;
   
 	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
@@ -467,7 +541,7 @@ ul {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background-color: #ffd000;
+	background-color: #fff;
 	opacity: 0.6;
 	position: absolute;
 	top: 0;
@@ -496,7 +570,37 @@ ul {
 		-webkit-transform: scale(1.0);
 	}
 }
-/* ===== Page loading End ===== */
+
+#page-move {
+	position: fixed;
+	top: calc(100% + 100px);
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #ffd000;
+	z-index: 9999999999;
+	
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+#page-move:before {
+	position: absolute;
+	content: '';
+	top: -100px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid;
+	border-bottom-color: #ffd000;
+	border-left: 100vw solid transparent;
+}
+
+#page-move.beforeLoad {
+	top: -60px;
+}
 
 
 /********************************************
@@ -877,7 +981,7 @@ a:active {
 }
 
 .modal-terms .modal-inner {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'robotoregular', sans-serif;
 	padding: 0 30px;
 }
 
@@ -1308,6 +1412,8 @@ a:active {
 #slide-menu li a img {
 	-ms-transform: scale(0.8);
 	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-o-transform: scale(0.8);
 	transform: scale(0.8);
 }
 
@@ -1714,30 +1820,69 @@ a:active {
 .route-svg-container {
 	width: 100%;
 	margin: 0 auto;
-	overflow: hidden;
+	padding: 25px 15px;
 }
 
-/*Hack for IE - Define height for this property*/
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	.route-svg-content {
-    height: 60vw;
-  }
+.route-svg-content {
+	overflow: visible;
+	opacity: 0;
 }
 
-@supports (-ms-accelerator:true) {
-	.route-svg-content {
-    height: 60vw;
-  }
+.route-svg-content.svgSingle,
+.route-svg-content.svgList {
+	opacity: 1;
 }
-/*END*/
 
-.route-transition .base-marker {
+.route-svg-content .base-marker > text,
+.route-svg-content .base-marker > .group-active,
+.route-svg-content .base-marker > .group-unactive {
+	opacity: 0;
+	
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.route-svg-content .base-marker > text {
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+	
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.route-svg-content.route-finished .base-marker > text,
+.route-svg-content.route-finished .base-marker > .group-active,
+.route-svg-content.route-finished .base-marker > .group-unactive {
+	opacity: 1;
+}
+
+.route-svg-single .route-svg-content.route-finished .base-marker {
 	cursor: pointer;
 }
 
+.unlock-now .base-marker {
+	cursor: inherit !important;
+}
+
 .base-active .circle-active {
+	opacity: 0;
+	
 	animation: baseAnimate 1200ms ease-out infinite;
 	-webkit-animation: baseAnimate 1200ms ease-out infinite;
+	
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+}
+
+.base-active.baseClick .circle-active {
+	animation-delay: 0s;
+	-webkit-animation-delay: 0s;
 }
 
 @keyframes baseAnimate {
@@ -1899,10 +2044,6 @@ a:active {
 
 .unlock-caption span {
 	display: block;
-}
-
-.base-content-wrapper .route-map {
-	padding: 30px 0;
 }
 
 .unlock-quiz .base-header h1,
@@ -2858,7 +2999,7 @@ a:active {
 .profile-edit form input,
 .profile-edit form select {
 	position: relative;
-	font-family: 'Paytone One', sans-serif;
+	font-family: 'paytone_oneregular', sans-serif;
 	width: 100%;
 	height: 44px;
 	font-size: 14px;
@@ -3010,12 +3151,7 @@ a:active {
 	text-align: center;
 	margin-bottom: 20px;
 }
-/*
-.route-modal-wrapper img {
-	width: 232px;
-	height: auto;
-}
-*/
+
 .route-modal-status {
 	font-size: 15px;
 	line-height: 14px;

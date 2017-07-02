@@ -10,6 +10,40 @@ jQuery(document).ready(function() {
 	"use strict";
 	
 	/* =============================================
+	Page loading transition
+	================================================ */
+	$('a').each(function() {
+		var linkEmpty = $(this).attr("href");
+		
+		$(this).addClass("move-transition");
+		if ($(this).hasClass("no-transition")) {
+			$(this).removeClass("move-transition");
+		}
+		if (linkEmpty == "#") {
+			$(this).removeClass("move-transition");
+		}
+	});
+	
+	var timeonLoad = 1300,
+		moveTransition = $('.move-transition');
+	
+	setTimeout(function(){
+		$('.loading-element').fadeOut(300);
+		$('#page-loading').addClass("pageLoaded");
+	}, 800);
+	
+	moveTransition.on("click", function(e){
+		e.preventDefault();
+		$('#page-move').addClass('beforeLoad');
+		
+		var linkDirection = $(this).attr('href');
+		setTimeout(function(){
+			window.location = linkDirection;
+		}, 300);
+	});
+	
+	
+	/* =============================================
 	Custom Data Attribute
 	================================================ */
 	var bgImage = ".bg-image";
@@ -128,7 +162,7 @@ jQuery(document).ready(function() {
 		$('.route-transition .base-marker').each(function() {
 			$(this).removeClass("base-active")
 		});
-		$(this).addClass("base-active");
+		$(this).addClass("base-active baseClick");
 		
 		var groupActive = $(".group-active").clone();
 		var groupUnActive = $(".group-unactive:first").clone();
@@ -228,8 +262,9 @@ jQuery(document).ready(function() {
 	
 	
 	/* =============================================
-	Devices available notify
+	Add fixed elements after mmenu loaded
 	================================================ */
+	$('body').prepend('<div id="page-move"></div>');
 	$('body').prepend('<div id="disable-devices"><div class="vertical-wrap"><div class="large-devices"><img src="images/svg/tablet.svg" alt=""/>not yet available<span>on this device</span></div><div class="rotate-device"><img src="images/svg/rotate-device.svg" alt=""/>Rotate your phone<span>for best experience with Singha Beerfinder</span></div></div></div>');
 	
 	
@@ -305,14 +340,61 @@ jQuery(document).ready(function() {
 		effect: 'custom'
     });
 	
-});
-
-
-/* =======================================================
-Pageloader
-========================================================== */
-$(window).on("load", function(){
+	
+	/* =============================================
+	Route animation setting
+	================================================ */
+	function routeAnimate() {
+	
+		var routeSingle = $('.route-svg-single .route-svg-content'),
+			routeList = $('.route-svg-list .route-svg-content');
+		
+		routeSingle.addClass("svgSingle");
+		routeList.addClass("svgList");
+			
+		var baseCircle = $('.base-marker').find("circle");
+		baseCircle.attr("data-ignore","true");
+		
+		var routeCallback = function (routeFinished) {
+			routeFinished.el.classList.add('route-finished');
+		};
+		
+		var routeSvgList = document.getElementsByClassName("svgList");
+		
+		for (var i = routeSvgList.length - 1; i >= 0; i--) {
+			new Vivus(routeSvgList[i], {
+				type: 'sync',
+				duration: 80,
+				animTimingFunction: Vivus.EASE_OUT,
+				onReady: function (routeFit) {
+					routeFit.el.setAttribute('width', '100%');
+					routeFit.el.setAttribute('height', '100%');
+				}
+			}, routeCallback);
+		}
+		
+		var routeSvgSingle = document.getElementsByClassName("svgSingle");
+		
+		for (var i = routeSvgSingle.length - 1; i >= 0; i--) {
+			new Vivus(routeSvgSingle[i], {
+				type: 'sync',
+				duration: 80,
+				animTimingFunction: Vivus.EASE_OUT,
+				onReady: function (routeFit) {
+					routeFit.el.setAttribute('width', '100%');
+					routeFit.el.setAttribute('height', '100%');
+				}
+			});
+		}
+		
+		setTimeout(function(){
+			routeSingle.addClass("route-finished");
+		}, 900);
+	
+	}
+	
 	setTimeout(function(){
-		$("#page-loading").fadeOut(300);
-	}, 300);
+		routeAnimate();
+	}, timeonLoad);
+	
 });

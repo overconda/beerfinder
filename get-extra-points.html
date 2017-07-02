@@ -8,11 +8,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 <title>Singha Beerfinder</title>
 
+<!--Phonegap-->
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
 		app.initialize();
 </script>
+<!--Phonegap-->
+
 
 <!--Animate CSS-->
 <link href="css/animate.css" rel="stylesheet" type="text/css">
@@ -197,7 +200,7 @@
 
                 <!--Back previous page-->
                 <div class="back-prev">
-                	<a href="javascript: history.go(-1)">
+                	<a class="no-transition" href="javascript: history.go(-1)">
                 		<img src="images/svg/back-arrow-dark.svg" alt="back previous"/>
                     </a>
                 </div>
@@ -287,6 +290,9 @@
 
 <!--Tabulous js-->
 <script type="text/javascript" src="components/tabulous.js/tabulous.js"></script>
+
+<!--Vivus js-->
+<script type="text/javascript" src="components/vivus/vivus.min.js"></script>
 
 <!--Custom js file-->
 <script type="text/javascript" src="js/custom.js"></script>
