@@ -1,0 +1,563 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+<title>Singha Beerfinder</title>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+		app.initialize();
+</script>
+
+<!--Animate CSS-->
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+
+<!--Mmenu CSS-->
+<link href="components/jquery.mmenu/jquery.mmenu.all.css" rel="stylesheet" type="text/css">
+
+<!--OWL Carousel CSS-->
+<link href="components/OwlCarousel2-2.2.1/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+<link href="components/OwlCarousel2-2.2.1/assets/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+
+<!--Tabulous CSS-->
+<link href="components/tabulous.js/tabulous.css" rel="stylesheet" type="text/css">
+
+<!--Main elements CSS-->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<!--Color scheme CSS-->
+<link href="css/color-scheme.css" rel="stylesheet" type="text/css">
+
+<!--Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
+
+</head>
+
+<body class="profile profile-routes-completed">
+
+	<!--Page loading-->
+    <div id="page-loading" class="Fixed">
+        <div class="loading-element">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+	<!--End-->
+
+    <!--Gradient background-->
+    <div id="gradient-bg"></div>
+    <!--End-->
+
+    <!--Slide menu start-->
+    <nav id="slide-menu">
+       <ul class="mm-nolistview">
+          <li class="slide-menu-active">
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-about.svg" alt="About Beerfinder"/></figure>
+            	<span>ABOUT BEERFINDER</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-faqs.svg" alt="How To Play & Rule"/></figure>
+            	<span>HOW TO PLAY & RULE</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-top.svg" alt="Top Beerfinder"/></figure>
+            	<span>TOP BEERFINDER</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-faqs.svg" alt="FAQs"/></figure>
+            	<span>FAQs</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-terms.svg" alt="Term & Condition"/></figure>
+            	<span>TERMS & CONDITION</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-logout.svg" alt="Log Out"/></figure>
+            	<span>LOG OUT</span>
+            </a>
+          </li>
+       </ul>
+    </nav>
+    <!--Slide menu end-->
+
+    <!--Menu notify start-->
+    <div class="notifying">
+    	<div class="notify-inset">
+
+            <h2>Just Notifying</h2>
+
+            <div class="notify-subject">
+                You are still be the pub guardian at
+            </div>
+
+            <div class="notify-image bg-image" data-bg-image="images/upload/slide-menu-notify-img.jpg"></div>
+
+            <div class="notify-base-name">
+                Dandvlvan, LDN
+            </div>
+
+            <div class="notify-time">
+                Time <span>15.30 Mins</span>
+            </div>
+
+            <div class="notify-desc">
+                25 People are trying to sack you down!
+            </div>
+
+        </div>
+    </div>
+    <!--Menu notify end-->
+
+	<!--Container wrapper start-->
+    <div id="container-wrapper">
+
+        <!--Bottom menu bar start-->
+        <div id="menu-bottom" class="Fixed">
+        	<ul>
+            	<li>
+                	<a href="home.html">
+                    	<img class="menu-light" src="images/svg/menu-home.svg" alt="home"/>
+                    	<img class="menu-dark" src="images/svg/menu-home-active.svg" alt="home"/>
+                        <span>HOME</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="routes.html">
+                    	<img class="menu-light" src="images/svg/menu-routes.svg" alt="home"/>
+                        <img class="menu-dark" src="images/svg/menu-routes-active.svg" alt="home"/>
+                        <span>ROUTES</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="reward.html">
+                    	<img class="menu-light" src="images/svg/menu-reward.svg" alt="home"/>
+                        <img class="menu-dark" src="images/svg/menu-reward-active.svg" alt="home"/>
+                        <span>REWARDS</span>
+                    </a>
+                </li>
+                <li class="menu-active">
+                	<a href="profile.html">
+                    	<img class="menu-light" src="images/svg/menu-profile.svg" alt="home"/>
+                        <img class="menu-dark" src="images/svg/menu-profile-active.svg" alt="home"/>
+                        <span>PROFILE</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--Bottom menu bar end-->
+
+        <!--Content wrapper start-->
+        <div id="content-wrapper" class="offset-top">
+        	<div class="container">
+            	<div class="row">
+                	<div class="col-one">
+
+                        <!--Message-->
+                        <div class="profile-msg">
+                        	<a href="msg-inbox.html">
+                                <span class="animated zoomIn">2</span>
+                                <img src="images/svg/message.svg" alt="message"/>
+                            </a>
+                        </div>
+
+                        <!--Routes list start-->
+                        <div class="routes-list-wrapper">
+
+                            <div class="routes-list">
+
+                                <!--Title-->
+                                <h2 class="profile-subtitle">Completed 2 routes</h2>
+
+                                <div class="routes-list-row">
+
+                                    <!--Route 1-->
+                                    <div class="routes-list-col">
+                                        <div class="route-box">
+                                            <a class="modal-open" href="#">
+                                                <figure>
+                                                    <img src="images/svg/route-profile.svg" alt="route"/>
+                                                </figure>
+                                                <h4>NORTH CHELSEA ST.</h4>
+                                                <div class="route-date">
+                                                    MAY 15, 2017
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!--Route 2-->
+                                    <div class="routes-list-col">
+                                        <div class="route-box">
+                                            <a class="modal-open" href="#">
+                                                <figure>
+                                                    <img src="images/svg/route-profile.svg" alt="route"/>
+                                                </figure>
+                                                <h4>FULHAM ST.</h4>
+                                                <div class="route-date">
+                                                    MAY 15, 2017
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="routes-list">
+
+                                <!--Title-->
+                                <h2 class="profile-subtitle">On going 6 routes</h2>
+
+                                <div class="routes-list-row">
+
+                                    <!--Route 1-->
+                                    <div class="routes-list-col">
+                                        <div class="route-box">
+                                            <a class="modal-open" href="#">
+                                                <figure>
+                                                    <img src="images/svg/route-profile.svg" alt="route"/>
+                                                </figure>
+                                                <h4>SUSSEX ST.</h4>
+                                                <div class="route-date">
+                                                    MAY 15, 2017
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!--Route 2-->
+                                    <div class="routes-list-col">
+                                        <div class="route-box">
+                                            <a class="modal-open" href="#">
+                                                <figure>
+                                                    <img src="images/svg/route-profile.svg" alt="route"/>
+                                                </figure>
+                                                <h4>LONDON EYE ST.</h4>
+                                                <div class="route-date">
+                                                    MAY 15, 2017
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!--Route 3-->
+                                    <div class="routes-list-col">
+                                        <div class="route-box">
+                                            <a class="modal-open" href="#">
+                                                <figure>
+                                                    <img src="images/svg/route-profile.svg" alt="route"/>
+                                                </figure>
+                                                <h4>Kingly ST.</h4>
+                                                <div class="route-date">
+                                                    MAY 15, 2017
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!--Route 4-->
+                                    <div class="routes-list-col">
+                                        <div class="route-box">
+                                            <a class="modal-open" href="#">
+                                                <figure>
+                                                    <img src="images/svg/route-profile.svg" alt="route"/>
+                                                </figure>
+                                                <h4>Holborn Circus</h4>
+                                                <div class="route-date">
+                                                    MAY 15, 2017
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!--Route 5-->
+                                    <div class="routes-list-col">
+                                        <div class="route-box">
+                                            <a class="modal-open" href="#">
+                                                <figure>
+                                                    <img src="images/svg/route-profile.svg" alt="route"/>
+                                                </figure>
+                                                <h4>Hallam ST.</h4>
+                                                <div class="route-date">
+                                                    MAY 15, 2017
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!--Route 6-->
+                                    <div class="routes-list-col">
+                                        <div class="route-box">
+                                            <a class="modal-open" href="#">
+                                                <figure>
+                                                    <img src="images/svg/route-profile.svg" alt="route"/>
+                                                </figure>
+                                                <h4>Cowcross ST.</h4>
+                                                <div class="route-date">
+                                                    MAY 15, 2017
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--Routes list end-->
+
+                    </div>
+            	</div>
+            </div>
+        </div>
+        <!--Content wrapper start-->
+
+        <!--Modal route details start-->
+        <div class="modal Fixed">
+			<div class="modal-content">
+
+            	<!--Modal heading-->
+                <div class="route-modal-heading">
+                	<h2 class="profile-subtitle">North Chelsea Street</h2>
+                    <div class="main-close modal-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <!--Model content start-->
+				<div class="modal-inner profile-modal-scroll">
+					<div class="container">
+						<div class="row">
+							<div class="col-one">
+
+                                	<!--Route map start-->
+                                	<div class="route-modal-wrapper">
+                                		<div class="route-svg-container parent-fixed">
+                                        	<svg class="route-svg-content" xmlns="http://www.w3.org/2000/svg" viewBox="-25 -50 360 240" preserveAspectRatio="xMinYMin meet">
+
+												<!--Route map-->
+												<path clip-path="url(#b)" fill="none" stroke="#ffd000" stroke-width="6" d="M14.036 132.415c-16.04-12.797-12.206-38.16 6.9-45.645l123.11-70.67c7.997-2.404 16.67-.476 22.896 5.09 8.18 7.315 10.534 19.16 5.772 29.048-3.94 5.23-3.083 12.634 1.95 16.823 6.458 5.376 16.253 3.2 19.825-4.405l81.535-57.727c8.833-2.588 18.356.344 24.205 7.45 9.816 11.928 6.423 29.834-7.076 37.344L179.6 125.78c-11.306 6.313-25.088 6.26-36.346-.14-9.262-5.268-15.978-14.625-26.206-18.293-35.034-12.562-67.92 53.062-103.012 25.068z"/>
+
+												<!--Base 1-->
+												<g class="base-marker" transform="translate(14,90)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">1</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 2-->
+												<g class="base-marker" transform="translate(70,57)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">2</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 3-->
+												<g class="base-marker" transform="translate(130,23)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">3</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 4-->
+												<g class="base-marker" transform="translate(172,28)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">4</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 5-->
+												<g class="base-marker" transform="translate(184,67)">
+													<text x="-5" y="27" font-size="20" fill="#fff">5</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 6-->
+												<g class="base-marker" transform="translate(235,33)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">6</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 7-->
+												<g class="base-marker" transform="translate(289,6)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">7</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 8-->
+												<g class="base-marker" transform="translate(270,65)">
+													<text x="-5" y="27" font-size="20" fill="#fff">8</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 9-->
+												<g class="base-marker" transform="translate(170,129)">
+													<text x="-5" y="27" font-size="20" fill="#fff">9</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 10-->
+												<g class="base-marker" transform="translate(45,137)">
+													<text x="-10" y="27" font-size="20" fill="#fff">10</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+											</svg>
+                                        </div>
+                                	</div>
+                                	<!--Route map end-->
+
+                                <!--Route details-->
+                                <table class="route-modal-status">
+                                    <tr>
+                                        <td class="status-title">Contain</td>
+                                        <td>10 Bases</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="status-title">Completed</td>
+                                        <td>June 14, 2017</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="status-title">Duration</td>
+                                        <td>12 Days</td>
+                                    </tr>
+                                </table>
+
+                                <!--Route bases start-->
+                                <ul class="route-modal-bases">
+
+                                	<!--Base 1-->
+                                    <li>
+                                    	<div class="route-modal-num">
+                                        	<span>1</span>
+                                        </div>
+                                        <div class="route-modal-details">
+                                        	<h4>DUKES BAR</h4>
+                                            <span>UNLOCKED ON JUNE 12, 2017</span>
+                                        </div>
+                                    </li>
+
+                                    <!--Base 2-->
+                                    <li>
+                                    	<div class="route-modal-num">
+                                        	<span>2</span>
+                                        </div>
+                                        <div class="route-modal-details">
+                                        	<h4>THE ELEPHANT & CASTLE</h4>
+                                            <span>UNLOCKED ON JUNE 12, 2017</span>
+                                        </div>
+                                    </li>
+
+                                    <!--Base 3-->
+                                    <li>
+                                    	<div class="route-modal-num">
+                                        	<span>3</span>
+                                        </div>
+                                        <div class="route-modal-details">
+                                        	<h4>FRENCH HOUSE</h4>
+                                            <span>UNLOCKED ON JUNE 12, 2017</span>
+                                        </div>
+                                    </li>
+
+                                    <!--Base 4-->
+                                    <li>
+                                    	<div class="route-modal-num">
+                                        	<span>4</span>
+                                        </div>
+                                        <div class="route-modal-details">
+                                        	<h4>HARP</h4>
+                                            <span>UNLOCKED ON JUNE 12, 2017</span>
+                                        </div>
+                                    </li>
+
+                                    <!--Base 5-->
+                                    <li>
+                                    	<div class="route-modal-num">
+                                        	<span>5</span>
+                                        </div>
+                                        <div class="route-modal-details">
+                                        	<h4>ZUPERSTARR</h4>
+                                            <span>UNLOCKED ON JUNE 12, 2017</span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <!--Route bases end-->
+
+							</div>
+						</div>
+					</div>
+				</div>
+                <!--Model content end-->
+
+			</div>
+		</div>
+		<!--Modal route details end-->
+
+    </div>
+    <!--Container wrapper end-->
+
+<!--jQuery files-->
+<script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+
+<!--Retina js-->
+<script type="text/javascript" src="js/retina.min.js"></script>
+
+<!--Mmenu js-->
+<script type="text/javascript" src="components/jquery.mmenu/jquery.mmenu.all.js"></script>
+
+<!--SlimScroll js-->
+<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+
+<!--OWL Carousel js-->
+<script type="text/javascript" src="components/OwlCarousel2-2.2.1/owl.carousel.min.js"></script>
+
+<!--Isotope js-->
+<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+
+<!--Imageloaded js-->
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+
+<!--Tabulous js-->
+<script type="text/javascript" src="components/tabulous.js/tabulous.js"></script>
+
+<!--Custom js file-->
+<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+</html>

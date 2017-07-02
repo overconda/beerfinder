@@ -1,0 +1,644 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+<title>Singha Beerfinder</title>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+		app.initialize();
+</script>
+
+<!--Animate CSS-->
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+
+<!--Mmenu CSS-->
+<link href="components/jquery.mmenu/jquery.mmenu.all.css" rel="stylesheet" type="text/css">
+
+<!--OWL Carousel CSS-->
+<link href="components/OwlCarousel2-2.2.1/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+<link href="components/OwlCarousel2-2.2.1/assets/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+
+<!--Tabulous CSS-->
+<link href="components/tabulous.js/tabulous.css" rel="stylesheet" type="text/css">
+
+<!--Main elements CSS-->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<!--Color scheme CSS-->
+<link href="css/color-scheme.css" rel="stylesheet" type="text/css">
+
+<!--Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
+
+</head>
+
+<body class="route-page">
+
+	<!--Page loading-->
+    <div id="page-loading" class="Fixed">
+        <div class="loading-element">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+	<!--End-->
+
+    <!--Gradient background-->
+    <div id="gradient-bg"></div>
+    <!--End-->
+
+    <!--Slide menu start-->
+    <nav id="slide-menu">
+       <ul class="mm-nolistview">
+          <li class="slide-menu-active">
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-about.svg" alt="About Beerfinder"/></figure>
+            	<span>ABOUT BEERFINDER</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-faqs.svg" alt="How To Play & Rule"/></figure>
+            	<span>HOW TO PLAY & RULE</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-top.svg" alt="Top Beerfinder"/></figure>
+            	<span>TOP BEERFINDER</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-faqs.svg" alt="FAQs"/></figure>
+            	<span>FAQs</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-terms.svg" alt="Term & Condition"/></figure>
+            	<span>TERMS & CONDITION</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-logout.svg" alt="Log Out"/></figure>
+            	<span>LOG OUT</span>
+            </a>
+          </li>
+       </ul>
+    </nav>
+    <!--Slide menu end-->
+
+    <!--Menu notify start-->
+    <div class="notifying">
+    	<div class="notify-inset">
+
+            <h2>Just Notifying</h2>
+
+            <div class="notify-subject">
+                You are still be the pub guardian at
+            </div>
+
+            <div class="notify-image bg-image" data-bg-image="images/upload/slide-menu-notify-img.jpg"></div>
+
+            <div class="notify-base-name">
+                Dandvlvan, LDN
+            </div>
+
+            <div class="notify-time">
+                Time <span>15.30 Mins</span>
+            </div>
+
+            <div class="notify-desc">
+                25 People are trying to sack you down!
+            </div>
+
+        </div>
+    </div>
+    <!--Menu notify end-->
+
+	<!--Container wrapper start-->
+    <div id="container-wrapper">
+
+        <!--Top menu bar start-->
+        <div id="menu-top" class="Fixed">
+            <div class="menu-top-wrap">
+
+                <!--Burger menu-->
+                <div id="burger">
+                    <span></span>
+                    <span></span>
+                    <div class="burger-bar1"></div>
+                    <div class="burger-bar2"></div>
+                    <div class="burger-bar3"></div>
+                </div>
+
+                <!--Logo-->
+                <div id="logo">
+                    <a href="home.html">
+                        <img src="images/logo-top.png" alt="Singha Beerfinder" />
+                    </a>
+                </div>
+
+                <!--Page title-->
+                <h1 class="page-title">Routes</h1>
+
+            </div>
+        </div>
+        <!--Top menu bar end-->
+
+        <!--Bottom menu bar start-->
+        <div id="menu-bottom" class="Fixed">
+        	<ul>
+            	<li>
+                	<a href="home.html">
+                    	<img class="menu-light" src="images/svg/menu-home.svg" alt="home"/>
+                    	<img class="menu-dark" src="images/svg/menu-home-active.svg" alt="home"/>
+                        <span>HOME</span>
+                    </a>
+                </li>
+                <li class="menu-active">
+                	<a href="routes.html">
+                    	<img class="menu-light" src="images/svg/menu-routes.svg" alt="home"/>
+                        <img class="menu-dark" src="images/svg/menu-routes-active.svg" alt="home"/>
+                        <span>ROUTES</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="reward.html">
+                    	<img class="menu-light" src="images/svg/menu-reward.svg" alt="home"/>
+                        <img class="menu-dark" src="images/svg/menu-reward-active.svg" alt="home"/>
+                        <span>REWARDS</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="profile.html">
+                    	<img class="menu-light" src="images/svg/menu-profile.svg" alt="home"/>
+                        <img class="menu-dark" src="images/svg/menu-profile-active.svg" alt="home"/>
+                        <span>PROFILE</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--Bottom menu bar end-->
+
+        <!--Content wrapper start-->
+        <div id="content-wrapper" class="offset-top">
+        	<div class="container-fluid no-gap">
+            	<div class="row">
+                	<div class="col-one">
+
+                        <!--Route filter start-->
+                        <div class="route-filter">
+                        	<a class="modal-open element-transparent" href="#">Most nearby routes (<span>6</span>)</a>
+                        </div>
+                        <!--Route filter end-->
+
+                        <!--Route items start-->
+                        <div class="route-item-wrapper">
+
+                        	<!--Route 1-->
+                        	<div class="route-item bg-image" data-bg-image="images/upload/route-bg-01.jpg">
+                            	<div class="route-item-details">
+
+                                	<div class="route-pts">125<span>PTS.</span></div>
+
+                                    <!--Route map start-->
+                                    <div class="route-map">
+                                    	<div class="route-svg-container">
+                                        	<svg class="route-svg-content" xmlns="http://www.w3.org/2000/svg" viewBox="-25 -50 360 240" preserveAspectRatio="xMinYMin meet">
+
+												<!--Route map-->
+												<path clip-path="url(#b)" fill="none" stroke="#ffd000" stroke-width="6" d="M14.036 132.415c-16.04-12.797-12.206-38.16 6.9-45.645l123.11-70.67c7.997-2.404 16.67-.476 22.896 5.09 8.18 7.315 10.534 19.16 5.772 29.048-3.94 5.23-3.083 12.634 1.95 16.823 6.458 5.376 16.253 3.2 19.825-4.405l81.535-57.727c8.833-2.588 18.356.344 24.205 7.45 9.816 11.928 6.423 29.834-7.076 37.344L179.6 125.78c-11.306 6.313-25.088 6.26-36.346-.14-9.262-5.268-15.978-14.625-26.206-18.293-35.034-12.562-67.92 53.062-103.012 25.068z"/>
+
+												<!--Base 1-->
+												<g class="base-marker" transform="translate(14,90)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">1</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 2-->
+												<g class="base-marker" transform="translate(70,57)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">2</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 3-->
+												<g class="base-marker" transform="translate(130,23)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">3</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 4-->
+												<g class="base-marker" transform="translate(172,28)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">4</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 5-->
+												<g class="base-marker" transform="translate(184,67)">
+													<text x="-5" y="27" font-size="20" fill="#fff">5</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 6-->
+												<g class="base-marker" transform="translate(235,33)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">6</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 7-->
+												<g class="base-marker" transform="translate(289,6)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">7</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 8-->
+												<g class="base-marker" transform="translate(270,65)">
+													<text x="-5" y="27" font-size="20" fill="#fff">8</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 9-->
+												<g class="base-marker" transform="translate(170,129)">
+													<text x="-5" y="27" font-size="20" fill="#fff">9</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 10-->
+												<g class="base-marker" transform="translate(45,137)">
+													<text x="-10" y="27" font-size="20" fill="#fff">10</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+											</svg>
+                                        </div>
+                                    </div>
+                                    <!--Route map end-->
+
+                                    <!--Route excerpt start-->
+                                    <div class="route-excerpt">
+                                    	<div class="route-desc">
+                                        	North Chelsea Street<br>10 PUBS, Created on <span>June 14, 2017</span>
+                                        </div>
+                                        <div class="route-btn">
+                                        	<div class="button button-small">
+                                        		<a href="routes-detail.html">Detail</a>
+                                        	</div>
+                                        </div>
+                                    </div>
+                                    <!--Route excerpt start-->
+
+                                </div>
+                            </div>
+                            <!--End-->
+
+                            <!--Route 2-->
+                        	<div class="route-item bg-image" data-bg-image="images/upload/route-bg-02.jpg">
+                            	<div class="route-item-details">
+
+                                	<div class="route-pts">125<span>PTS.</span></div>
+
+                                    <!--Route map start-->
+                                    <div class="route-map">
+                                    	<div class="route-svg-container">
+                                        	<svg class="route-svg-content" xmlns="http://www.w3.org/2000/svg" viewBox="-25 -50 360 240" preserveAspectRatio="xMinYMin meet">
+
+												<!--Route map-->
+												<path clip-path="url(#b)" fill="none" stroke="#ffd000" stroke-width="6" d="M14.036 132.415c-16.04-12.797-12.206-38.16 6.9-45.645l123.11-70.67c7.997-2.404 16.67-.476 22.896 5.09 8.18 7.315 10.534 19.16 5.772 29.048-3.94 5.23-3.083 12.634 1.95 16.823 6.458 5.376 16.253 3.2 19.825-4.405l81.535-57.727c8.833-2.588 18.356.344 24.205 7.45 9.816 11.928 6.423 29.834-7.076 37.344L179.6 125.78c-11.306 6.313-25.088 6.26-36.346-.14-9.262-5.268-15.978-14.625-26.206-18.293-35.034-12.562-67.92 53.062-103.012 25.068z"/>
+
+												<!--Base 1-->
+												<g class="base-marker" transform="translate(14,90)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">1</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 2-->
+												<g class="base-marker" transform="translate(70,57)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">2</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 3-->
+												<g class="base-marker" transform="translate(130,23)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">3</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 4-->
+												<g class="base-marker" transform="translate(172,28)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">4</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 5-->
+												<g class="base-marker" transform="translate(184,67)">
+													<text x="-5" y="27" font-size="20" fill="#fff">5</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 6-->
+												<g class="base-marker" transform="translate(235,33)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">6</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 7-->
+												<g class="base-marker" transform="translate(289,6)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">7</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 8-->
+												<g class="base-marker" transform="translate(270,65)">
+													<text x="-5" y="27" font-size="20" fill="#fff">8</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 9-->
+												<g class="base-marker" transform="translate(170,129)">
+													<text x="-5" y="27" font-size="20" fill="#fff">9</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 10-->
+												<g class="base-marker" transform="translate(45,137)">
+													<text x="-10" y="27" font-size="20" fill="#fff">10</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+											</svg>
+                                        </div>
+                                    </div>
+                                    <!--Route map end-->
+
+                                    <!--Route excerpt start-->
+                                    <div class="route-excerpt">
+                                    	<div class="route-desc">
+                                        	North Chelsea Street<br>10 PUBS, Created on <span>June 14, 2017</span>
+                                        </div>
+                                        <div class="route-btn">
+                                        	<div class="button button-small">
+                                        		<a href="routes-detail.html">Detail</a>
+                                        	</div>
+                                        </div>
+                                    </div>
+                                    <!--Route excerpt end-->
+
+                                </div>
+                            </div>
+                            <!--End-->
+
+                            <!--Route 3-->
+                        	<div class="route-item bg-image" data-bg-image="images/upload/route-bg-03.jpg">
+                            	<div class="route-item-details">
+
+                                	<div class="route-pts">125<span>PTS.</span></div>
+
+                                    <!--Route map start-->
+                                    <div class="route-map">
+                                    	<div class="route-svg-container">
+                                        	<svg class="route-svg-content" xmlns="http://www.w3.org/2000/svg" viewBox="-25 -50 360 240" preserveAspectRatio="xMinYMin meet">
+
+												<!--Route map-->
+												<path clip-path="url(#b)" fill="none" stroke="#ffd000" stroke-width="6" d="M14.036 132.415c-16.04-12.797-12.206-38.16 6.9-45.645l123.11-70.67c7.997-2.404 16.67-.476 22.896 5.09 8.18 7.315 10.534 19.16 5.772 29.048-3.94 5.23-3.083 12.634 1.95 16.823 6.458 5.376 16.253 3.2 19.825-4.405l81.535-57.727c8.833-2.588 18.356.344 24.205 7.45 9.816 11.928 6.423 29.834-7.076 37.344L179.6 125.78c-11.306 6.313-25.088 6.26-36.346-.14-9.262-5.268-15.978-14.625-26.206-18.293-35.034-12.562-67.92 53.062-103.012 25.068z"/>
+
+												<!--Base 1-->
+												<g class="base-marker" transform="translate(14,90)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">1</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 2-->
+												<g class="base-marker" transform="translate(70,57)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">2</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 3-->
+												<g class="base-marker" transform="translate(130,23)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">3</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 4-->
+												<g class="base-marker" transform="translate(172,28)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">4</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 5-->
+												<g class="base-marker" transform="translate(184,67)">
+													<text x="-5" y="27" font-size="20" fill="#fff">5</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 6-->
+												<g class="base-marker" transform="translate(235,33)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">6</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 7-->
+												<g class="base-marker" transform="translate(289,6)">
+													<text x="-5" y="-15" font-size="20" fill="#fff">7</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 8-->
+												<g class="base-marker" transform="translate(270,65)">
+													<text x="-5" y="27" font-size="20" fill="#fff">8</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 9-->
+												<g class="base-marker" transform="translate(170,129)">
+													<text x="-5" y="27" font-size="20" fill="#fff">9</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+												<!--Base 10-->
+												<g class="base-marker" transform="translate(45,137)">
+													<text x="-10" y="27" font-size="20" fill="#fff">10</text>
+													<g class="group-unactive">
+														<circle fill="#ffd000" stroke="#fff" stroke-width="5" cx="0" cy="0" r="7"/>
+													</g>
+												</g>
+
+											</svg>
+                                        </div>
+                                    </div>
+                                    <!--Route map end-->
+
+                                    <!--Route excerpt start-->
+                                    <div class="route-excerpt">
+                                    	<div class="route-desc">
+                                        	North Chelsea Street<br>10 PUBS, Created on <span>June 14, 2017</span>
+                                        </div>
+                                        <div class="route-btn">
+                                        	<div class="button button-small">
+                                        		<a href="routes-detail.html">Detail</a>
+                                        	</div>
+                                        </div>
+                                    </div>
+                                    <!--Route excerpt end-->
+
+                                </div>
+                            </div>
+                            <!--End-->
+
+                        </div>
+                        <!--Route items end-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Content wrapper start-->
+
+        <!--Modal route filter start-->
+		<div class="modal Fixed">
+			<div class="modal-content">
+
+            	<!--Modal close-->
+                <div class="main-close modal-close">
+                	<span></span>
+                    <span></span>
+                </div>
+
+				<div class="modal-inner custom-scroll">
+					<div class="container">
+						<div class="row">
+							<div class="col-one">
+
+                                <ul class="route-list">
+                                	<li><a href="#">MY FAVORITE ROUTES</a></li>
+                                    <li class="route-active"><a href="#">MOST NEARBY ROUTES</a></li>
+                                    <li><a href="#">MY ON GOING ROUTES</a></li>
+                                    <li><a href="#">MY COMPLETED ROUTES</a></li>
+                                    <li><a href="#">MOST POINTS ROUTES</a></li>
+                                    <li><a href="#">MOST POPULAR ROUTES</a></li>
+                                    <li><a href="#">CHELSEA STREET</a></li>
+                                    <li><a href="#">FULHAM STREET</a></li>
+                                    <li><a href="#">OXFORD STREET</a></li>
+                                    <li><a href="#">ABBEY ROAD</a></li>
+                                    <li><a href="#">WESTMINSTER</a></li>
+                                    <li><a href="#">SOHO</a></li>
+                                    <li><a href="#">FARRINGDON</a></li>
+                                    <li><a href="#">ST. JAMES</a></li>
+                                    <li><a href="#">Clerkenwell Road</a></li>
+                                    <li><a href="#">Cowcross Street</a></li>
+                                    <li><a href="#">Devonshire Street</a></li>
+                                    <li><a href="#">Hallam Street</a></li>
+                                    <li><a href="#">Holborn Circus</a></li>
+                                    <li><a href="#">Kingly Street</a></li>
+                                </ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+        <!--Modal route filter end-->
+
+    </div>
+    <!--Container wrapper end-->
+
+<!--jQuery files-->
+<script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+
+<!--Retina js-->
+<script type="text/javascript" src="js/retina.min.js"></script>
+
+<!--Mmenu js-->
+<script type="text/javascript" src="components/jquery.mmenu/jquery.mmenu.all.js"></script>
+
+<!--SlimScroll js-->
+<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+
+<!--OWL Carousel js-->
+<script type="text/javascript" src="components/OwlCarousel2-2.2.1/owl.carousel.min.js"></script>
+
+<!--Isotope js-->
+<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+
+<!--Imageloaded js-->
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+
+<!--Tabulous js-->
+<script type="text/javascript" src="components/tabulous.js/tabulous.js"></script>
+
+<!--Custom js file-->
+<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+<title>Singha Beerfinder</title>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+		app.initialize();
+</script>
+
+<!--Animate CSS-->
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+
+<!--Mmenu CSS-->
+<link href="components/jquery.mmenu/jquery.mmenu.all.css" rel="stylesheet" type="text/css">
+
+<!--OWL Carousel CSS-->
+<link href="components/OwlCarousel2-2.2.1/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+<link href="components/OwlCarousel2-2.2.1/assets/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+
+<!--Tabulous CSS-->
+<link href="components/tabulous.js/tabulous.css" rel="stylesheet" type="text/css">
+
+<!--Main elements CSS-->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<!--Color scheme CSS-->
+<link href="css/color-scheme.css" rel="stylesheet" type="text/css">
+
+<!--Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
+
+</head>
+
+<body class="profile profile-edit">
+
+	<!--Page loading-->
+    <div id="page-loading" class="Fixed">
+        <div class="loading-element">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+	<!--End-->
+
+    <!--Gradient background-->
+    <div id="gradient-bg"></div>
+    <!--End-->
+
+    <!--Slide menu start-->
+    <nav id="slide-menu">
+       <ul class="mm-nolistview">
+          <li class="slide-menu-active">
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-about.svg" alt="About Beerfinder"/></figure>
+            	<span>ABOUT BEERFINDER</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-faqs.svg" alt="How To Play & Rule"/></figure>
+            	<span>HOW TO PLAY & RULE</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-top.svg" alt="Top Beerfinder"/></figure>
+            	<span>TOP BEERFINDER</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-faqs.svg" alt="FAQs"/></figure>
+            	<span>FAQs</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-terms.svg" alt="Term & Condition"/></figure>
+            	<span>TERMS & CONDITION</span>
+            </a>
+          </li>
+          <li>
+          	<a href="#">
+            	<figure><img src="images/svg/slide-menu-logout.svg" alt="Log Out"/></figure>
+            	<span>LOG OUT</span>
+            </a>
+          </li>
+       </ul>
+    </nav>
+    <!--Slide menu end-->
+
+    <!--Menu notify start-->
+    <div class="notifying">
+    	<div class="notify-inset">
+
+            <h2>Just Notifying</h2>
+
+            <div class="notify-subject">
+                You are still be the pub guardian at
+            </div>
+
+            <div class="notify-image bg-image" data-bg-image="images/upload/slide-menu-notify-img.jpg"></div>
+
+            <div class="notify-base-name">
+                Dandvlvan, LDN
+            </div>
+
+            <div class="notify-time">
+                Time <span>15.30 Mins</span>
+            </div>
+
+            <div class="notify-desc">
+                25 People are trying to sack you down!
+            </div>
+
+        </div>
+    </div>
+    <!--Menu notify end-->
+
+	<!--Container wrapper start-->
+    <div id="container-wrapper">
+
+        <!--Bottom menu bar start-->
+        <div id="menu-bottom" class="Fixed">
+        	<ul>
+            	<li>
+                	<a href="home.html">
+                    	<img class="menu-light" src="images/svg/menu-home.svg" alt="home"/>
+                    	<img class="menu-dark" src="images/svg/menu-home-active.svg" alt="home"/>
+                        <span>HOME</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="routes.html">
+                    	<img class="menu-light" src="images/svg/menu-routes.svg" alt="home"/>
+                        <img class="menu-dark" src="images/svg/menu-routes-active.svg" alt="home"/>
+                        <span>ROUTES</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="reward.html">
+                    	<img class="menu-light" src="images/svg/menu-reward.svg" alt="home"/>
+                        <img class="menu-dark" src="images/svg/menu-reward-active.svg" alt="home"/>
+                        <span>REWARDS</span>
+                    </a>
+                </li>
+                <li class="menu-active">
+                	<a href="profile.html">
+                    	<img class="menu-light" src="images/svg/menu-profile.svg" alt="home"/>
+                        <img class="menu-dark" src="images/svg/menu-profile-active.svg" alt="home"/>
+                        <span>PROFILE</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--Bottom menu bar end-->
+
+        <!--Content wrapper start-->
+        <div id="content-wrapper" class="offset-top">
+        	<div class="container">
+            	<div class="row">
+                	<div class="col-one">
+
+                    	<!--Cancel-->
+                        <div class="profile-edit-btn cancel-btn">
+                            <div class="button button-tiny">
+                                <a href="#">Cancel</a>
+                            </div>
+                        </div>
+
+                        <!--Save-->
+                        <div class="profile-edit-btn">
+                            <div class="button button-tiny">
+                                <a href="#">Save</a>
+                            </div>
+                        </div>
+
+                        <!--Profile top main start-->
+                        <h1 class="profile-title profile-heading">Hello!</h1>
+
+                        <div class="profile-avatar">
+                        	<div class="border-dot-wrap">
+                            	<img src="images/svg/circle-dot.svg" alt="border"/>
+                            </div>
+                            <figure>
+                                <img class="img-fit" src="images/upload/guardian-avatar-2.jpg" alt="Avatar"/>
+                            </figure>
+                            <div class="avatar-btn upload-photo">
+                            	<a href="#">
+                                    <img src="images/svg/camera.svg" alt="Upload photo"/>
+                                </a>
+                            </div>
+                        </div>
+                        <!--Profile top main end-->
+
+                        <!--Change name-->
+                        <form class="form-border">
+                        	<input type="text" name="Name" value="" placeholder="Your Name">
+                            <label></label>
+                        </form>
+
+                        <!--Play location-->
+                        <h2 class="profile-subtitle">Play location</h2>
+                        <form>
+                        	<select name="location">
+                                <option selected>UK / United Kingdom</option>
+                                <option>Japan</option>
+                                <option>Thailand</option>
+                            </select>
+                            <label></label>
+                        </form>
+
+                        <!--Play language-->
+                        <h2 class="profile-subtitle">Play language</h2>
+                        <form class="form-border">
+                        	<select name="language">
+                                <option selected>English</option>
+                                <option>Japanese</option>
+                                <option>Thai</option>
+                            </select>
+                            <label></label>
+                        </form>
+
+                        <!--Active email-->
+                        <h2 class="profile-subtitle">Your active email</h2>
+
+                        <form>
+                        	<input type="text" name="Email" value="" placeholder="Your Email">
+                            <label></label>
+                        </form>
+
+                    </div>
+            	</div>
+            </div>
+        </div>
+        <!--Content wrapper start-->
+
+    </div>
+    <!--Container wrapper end-->
+
+<!--jQuery files-->
+<script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+
+<!--Retina js-->
+<script type="text/javascript" src="js/retina.min.js"></script>
+
+<!--Mmenu js-->
+<script type="text/javascript" src="components/jquery.mmenu/jquery.mmenu.all.js"></script>
+
+<!--SlimScroll js-->
+<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+
+<!--OWL Carousel js-->
+<script type="text/javascript" src="components/OwlCarousel2-2.2.1/owl.carousel.min.js"></script>
+
+<!--Isotope js-->
+<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+
+<!--Imageloaded js-->
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+
+<!--Tabulous js-->
+<script type="text/javascript" src="components/tabulous.js/tabulous.js"></script>
+
+<!--Custom js file-->
+<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+</html>

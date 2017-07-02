@@ -1,0 +1,114 @@
+/**
+	Singha Beerfinder
+ 	Copyright 2017 Boon Rawd Brewery Company Limited.
+	Author: Boon Rawd Brewery Company Limited.
+**/
+
+
+/********************************************
+Main color scheme
+*********************************************/
+h1, h2, h3, h4, h5, h6,
+.main-color,
+.login-top h1,
+.carousel-title span,
+.point-col,
+.meta-unlock span,
+.guardian-quizzes span,
+.extra-points-num,
+.reward-point span,
+.reward-item-point,
+.route-stat-col a,
+.mins-stat-col span,
+.your-pts-wrapper span {
+	color: #ffd000;
+}
+
+.menu-top-wrap,
+.button a,
+.login-method li a,
+#menu-bottom li.menu-active a,
+#burger.burger-close .burger-bar1,
+#burger.burger-close .burger-bar2,
+#burger.burger-close .burger-bar3,
+.mm-menu.mm-theme-dark,
+.route-list li.route-active a,
+.route-list li:active a,
+.route-list li:after,
+.route-fav,
+.base-num,
+.quiz-progress .progress-bar,
+.reward-single-pts,
+.avatar-btn,
+.profile-field,
+.profile-edit form input + label,
+.profile-edit form select + label,
+.route-modal-heading,
+.route-modal-num span {
+	background-color: #ffd000;
+}
+
+.full-page-wrapper,
+.modal-content,
+.border-dashed,
+.route-pts,
+.guardian-avatar img,
+.extra-points-image img {
+	border-color: #ffd000;
+}
+
+.route-filter a:after {
+	border-color: #ffd000 transparent transparent transparent;
+}
+
+
+/********************************************
+Main color scheme active focus
+*********************************************/
+.button a:active,
+.button a:focus,
+.login-method li a:active,
+.login-method li a:focus,
+.route-fav:active,
+.route-fav:focus,
+.profile-edit form input:focus + label,
+.profile-edit form input:active + label,
+.profile-edit form select:focus + label,
+.profile-edit form select:active + label {
+	background-color: #f3c600;
+}
+
+
+/********************************************
+Main dark color scheme
+*********************************************/
+#menu-top,
+.page-title,
+.button a,
+.login-method li a,
+.notifying,
+.notifying h2,
+.route-list li a,
+#menu-bottom li.menu-active a,
+.base-num,
+.base-header h1,
+.quiz-type,
+.quiz-title,
+.reward-single-pts span,
+.avatar-btn,
+.profile-field,
+.profile-edit form input,
+.profile-edit form select,
+.route-modal-heading .profile-subtitle,
+.route-modal-num span {
+	color: #53585f;
+}
+
+#burger .burger-bar1,
+#burger .burger-bar2,
+#burger .burger-bar3,
+.main-close span,
+.route-fav:before,
+.route-fav:after {
+	background-color: #53585f;
+}
